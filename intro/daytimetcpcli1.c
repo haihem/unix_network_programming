@@ -1,7 +1,5 @@
 #include "../lib/unp.h"
 
-#define PORT 13
-
 int main(int argc, char **argv) {
     int sockfd, n;
     char recvline[MAXLINE + 1];

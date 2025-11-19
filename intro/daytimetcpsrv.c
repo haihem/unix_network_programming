@@ -12,7 +12,7 @@ int main() {
     memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    servaddr.sin_port = htons(13);
+    servaddr.sin_port = htons(PORT);
     Bind(listenfd, (struct sockaddr *) &servaddr, sizeof(servaddr));
     printf("Bind done\n");
     Listen(listenfd, LISTENQ);
