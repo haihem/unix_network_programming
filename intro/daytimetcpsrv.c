@@ -22,7 +22,7 @@ int main() {
         connfd = Accept(listenfd, (struct sockaddr *) NULL, NULL);
         printf("Accept done\n");
         ticks = time(NULL);
-        snprintf(buff, sizeof(buff), "%.24s\er\en", ctime(&ticks));
+        snprintf(buff, sizeof(buff), "%.24s\er\en \n", ctime(&ticks));
         Write(connfd, buff, strlen(buff));
         printf("Write done\n");
         Close(connfd);
